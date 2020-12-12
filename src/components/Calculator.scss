@@ -1,0 +1,83 @@
+$color1: #a7a6a7;
+$color2: #343434;
+$color3: #ff9700;
+$color4: white;
+$color5: black;
+
+@font-face {
+  font-family: "MainFont";
+  src: url("../assets/MainFont.otf") format("opentype");
+}
+
+body {
+  background-color: black;
+}
+
+.calculator {
+  width: 20rem;
+  margin: auto;
+  border: 1px solid white;
+}
+
+.windowNumber {
+  text-align: end;
+  color: $color4;
+  padding-right: 1rem;
+  font-family: "MainFont";
+  font-size: 4rem;
+}
+
+.lineItems {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+  font-family: "MainFont";
+  .roundButton {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24%;
+    height: 4rem;
+    border-radius: 50%;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+
+    &:hover {
+      filter: brightness(2);
+    }
+  }
+
+  .zeroButton {
+    cursor: pointer;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 1rem;
+    height: 4rem;
+    width: 50%;
+    border-radius: 2rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+
+    &:hover {
+      filter: brightness(2);
+    }
+  }
+
+  .whiteButton {
+    background-color: $color1;
+  }
+
+  .blackButton {
+    background-color: $color2;
+    color: $color4;
+  }
+
+  .orangeButton {
+    background-color: $color3;
+    color: $color4;
+  }
+}
